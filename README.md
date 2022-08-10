@@ -1,6 +1,11 @@
-# Nuxt 3 Snowowl Starter Template
+# Nuxt 3 Snowowl Starter Template 
 
 Look at the [nuxt 3 documentation](https://v3.nuxtjs.org) to learn more.
+<img
+  src="public/owl-vector-light.svg"
+  alt="Snowowl Logo"
+  title="Snowowl Logo"
+  style="width:80px; float:right;">
 
 ## Features
 
