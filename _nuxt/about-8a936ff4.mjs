@@ -1,0 +1,1 @@
+import{a as e,o as t,b as o,e as a}from"./entry-f5570ca1.mjs";const c={},s=a("h1",{class:"text-3xl text-center"},"about",-1),r=[s];function n(_,l){return t(),o("div",null,r)}var f=e(c,[["render",n]]);export{f as default};
