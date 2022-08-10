@@ -30,11 +30,12 @@ export default defineNuxtConfig({
     icons: true, // enabled `@unocss/preset-icons`
     attributify: true, // enabled `@unocss/preset-attributify`
     transformers: [transformerVariantGroup()],
+
     // core options
     shortcuts: [
       [
         'nav-item',
-        'py-3 border-b-1 border-b-gray-400 w-30% self-center lg:border-none lg:w-auto lg:px-4 lg:py-0',
+        'py-3 border-b-1 border-b-gray-400 w-30% self-center lg:(border-none w-auto px-4 py-0)',
       ],
       [
         'nav-item-link',
@@ -42,11 +43,11 @@ export default defineNuxtConfig({
       ],
       [
         'icon-btn',
-        'inline-block cursor-pointer select-none opacity-75 transition hover:opacity-100 hover:text-teal-600 dark:text-light-900 text-dark-800 !outline-none !border-none',
+        'inline-block cursor-pointer select-none opacity-75 transition hover:(opacity-100 text-teal-600) text-dark-800 dark:text-light-900 !outline-none !border-none',
       ],
       [
         'counter-btn',
-        'px-4 py-2 font-medium text-sm tracking-wide text-white capitalize cursor-pointer transition-colors transform bg-teal-600 rounded-md border-none hover:bg-teal-500 focus:outline-none focus:ring focus:ring-teal-300 focus:ring-opacity-80',
+        'px-4 py-2 font-medium text-sm tracking-wide text-white capitalize cursor-pointer transition-colors transform bg-teal-600 rounded-md border-none hover:bg-teal-500 focus:(outline-none ring ring-teal-300 ring-opacity-80)',
       ],
       [
         'bar',
