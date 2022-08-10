@@ -1,4 +1,5 @@
 import {defineNuxtConfig} from 'nuxt'
+import transformerVariantGroup from '@unocss/transformer-variant-group'
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
@@ -21,14 +22,14 @@ export default defineNuxtConfig({
 
   modules: ['@vueuse/nuxt', '@pinia/nuxt', '@unocss/nuxt'],
 
-  css: ['@unocss/reset/normalize.css', '~/assets/main.css'],
+  css: ['~/assets/normalize.css', '~/assets/main.css'],
 
   unocss: {
     // presets
     uno: true, // enabled `@unocss/preset-uno`
     icons: true, // enabled `@unocss/preset-icons`
     attributify: true, // enabled `@unocss/preset-attributify`
-
+    transformers: [transformerVariantGroup()],
     // core options
     shortcuts: [
       [

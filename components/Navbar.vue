@@ -12,11 +12,11 @@ const showMenu = () => {
       <NuxtLink
         to="/"
         class="text-2xl font-semibold whitespace-nowrap no-underline text-dark-800 dark:text-white"
-        >
+      >
       </NuxtLink>
 
       <ul
-        class="fixed left--100% top-8 flex-col w-full h-screen text-center py-2 z-50 transition-left flex md:border-r-1 md:border-t-1 md:border-light-900 md:w-35% lg:border-none lg:static lg:flex-row lg:w-auto lg:h-auto lg:py-0 lg:m-0 bg-light-900 dark:bg-primary"
+        class="fixed left--100% top-8 flex-col w-full h-screen text-center py-2 z-50 transition-left flex bg-light-900 dark:bg-primary md:( border-r-1 border-t-1 border-light-900 w-35% ) lg:( border-none static flex-row w-auto h-auto py-0 m-0 )"
         :class="{active: isActive}"
       >
         <li class="nav-item">
