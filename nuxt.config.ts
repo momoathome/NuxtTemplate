@@ -33,17 +33,14 @@ export default defineNuxtConfig({
 
     // core options
     shortcuts: [
+      ['nav-item', 'py-2 px-2 lg:(py-2.5)'],
       [
-        'nav-item',
-        'py-3 border-b-1 border-b-gray-400 w-30% self-center md:w-50% lg:(border-none w-auto p-4 py-0)',
+        'nav-item-link',
+        'no-underline transition py-2 text-2xl text-dark-800 hover:text-teal-600 dark:text-gray-400 dark:hover:text-white lg:(text-lg px-2 py-2.5)',
       ],
       [
         'dropDown-item',
-        'block px-4 py-3 w-75% m-auto flex justify-center border-b-1 border-b-gray-400 lg:(w-100% !py-2.5) hover:bg-light-700/60 dark:hover:bg-gray-600 ',
-      ],
-      [
-        'nav-item-link',
-        'no-underline transition text-dark-800 hover:text-teal-600 dark:text-gray-400 dark:hover:text-white lg:py-4',
+        'block px-4 py-2 w-30% md:w-75% lg:(w-full flex justify-center !px-0 !py-2) hover:bg-light-700/60 dark:hover:bg-gray-600 ',
       ],
       [
         'icon-btn',
