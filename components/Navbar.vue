@@ -1,6 +1,7 @@
 <script setup lang="ts">
 const isActive = ref(false)
 const isDDMDown = ref(false)
+const target = ref()
 
 const showMenu = () => {
   isActive.value = !isActive.value
@@ -12,15 +13,15 @@ const showDDM = () => {
 
 <template>
   <!-- prettier-ignore -->
-  <nav class="m-auto w-full flex py-2 lg:py-0 px-6 b-b-1px b-primary/15 dark:b-light-900/10" >
+  <nav class="m-auto w-full flex py-2 lg:py-0 px-6 b-b-1px b-base/15 dark:b-light-900/10" >
     <div class="flex justify-between items-center w-full">
-        <!-- prettier-ignore -->
-        <!-- Logo  -->
-      <NuxtLink to="/" class="text-2xl font-semibold whitespace-nowrap no-underline text-dark-800 dark:text-white">Logo</NuxtLink>
+      <!-- Logo  -->
+      <!-- prettier-ignore -->
+      <NuxtLink to="" class="text-2xl font-semibold whitespace-nowrap no-underline dark:text-white">Nuxt Template</NuxtLink>
 
       <!-- Navigation links -->
       <div
-        class="fixed left--100% top-12 flex-col w-full h-screen py-2 px-6 z-50 transition-left flex bg-light-900 dark:bg-primary md:( border-r-1 border-t-1 border-primary dark:border-light-900 w-30% h-full ) lg:( border-none static flex-row w-auto h-auto py-0 m-0 )"
+        class="fixed left--100% top-12 flex-col w-full h-screen py-2 px-6 z-10 transition-left flex bg-light-900 dark:bg-base md:( border-r-1 border-t-1 border-base dark:border-light-900 w-30% h-full ) lg:( border-none static flex-row w-auto h-auto py-0 m-0 )"
         :class="{active: isActive}"
       >
           <NuxtLink to="/" class="nav-item-link"> Home </NuxtLink>
@@ -36,19 +37,21 @@ const showDDM = () => {
 
           <!-- Dropdown menu -->
           <div
-            class="transition lg:( origin-top-right absolute right-0 left--3 mt-3 w-40 rounded-md shadow-lg bg-light-900 dark:bg-primary ring-1 ring-primary dark:ring-light-900 )"
+            class="transition lg:( origin-top-right absolute right-0 left--1 mt-3 w-40 rounded-md shadow-lg bg-light-900 dark:bg-base ring-1 ring-base dark:ring-light-900 )"
             :class="[isDDMDown ? 'block' : 'hidden']"
+            @click="showDDM"
           >
             <div class="py-1">
-              <NuxtLink to="" class="nav-item-link dropDown-item"> Link </NuxtLink>
-              <NuxtLink to="" class="nav-item-link dropDown-item"> Link </NuxtLink>
-              <NuxtLink to="" class="nav-item-link dropDown-item lg:!py-2"> Link </NuxtLink>
+              <NuxtLink to="" class="dropDown-item"> Link </NuxtLink>
+              <NuxtLink to="" class="dropDown-item"> Link </NuxtLink>
+              <NuxtLink to="" class="dropDown-item"> Link </NuxtLink>
+              <NuxtLink to="" class="dropDown-item"> Link </NuxtLink>
             </div>
           </div>
         </div>
 
           <!-- Navigation links -->
-          <NuxtLink to="" class="nav-item-link b-none"> Link </NuxtLink>
+          <NuxtLink to="" class="nav-item-link"> Link </NuxtLink>
       </div>
 
       <!-- Mobile button -->
@@ -63,18 +66,19 @@ const showDDM = () => {
       </div>
     </div>
 
-    <!-- Darkmode Component - Button -->
-    <DarkButton class="text-2xl" />
-
-    <!-- Gihub Button -->
-    <NuxtLink
-      to="https://github.com/momoathome"
-      rel="noopener noreferrer"
-      target="_blank"
-      class="icon-btn self-center px-1.5 py-1 text-2xl"
-    >
-      <div i-carbon-logo-github />
-    </NuxtLink>
+    <div class="flex gap-3 items-center">
+      <!-- Darkmode Component - Button -->
+      <DarkButton class="text-xl" />
+      <!-- Gihub Button -->
+      <NuxtLink
+        to="https://github.com/momoathome"
+        rel="noopener noreferrer"
+        target="_blank"
+        class="icon-btn text-xl"
+        i-carbon-logo-github
+      >
+      </NuxtLink>
+    </div>
 
   </nav>
 </template>
