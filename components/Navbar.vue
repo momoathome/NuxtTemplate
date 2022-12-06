@@ -17,7 +17,7 @@ onClickOutside(target, (e) => (isDDMDown.value = false))
 <template>
   <div>
     <nav
-      class="fixed left--100% top-12 flex-col w-full h-screen py-2 px-6 z-10 transition-left flex bg-base_light dark:bg-base md:( border-r-1 border-t-1 border-base dark:border-base_light w-30% h-full ) lg:( border-none static flex-row w-auto h-auto py-0 m-0 )"
+      class="bg-base_light flex-col flex h-screen w-full py-2 px-6 transition-left top-12 left--100% z-10 fixed md:( border-r-1 border-t-1 border-base dark:border-base_light w-30% h-full ) lg:( border-none static flex-row w-auto h-auto py-0 m-0 ) dark:bg-base "
       :class="[isActive ? 'left-0' : '']"
     >
       <!-- Navigation Links -->
@@ -26,7 +26,7 @@ onClickOutside(target, (e) => (isDDMDown.value = false))
       <NuxtLink to="" class="nav-item-link"> Link </NuxtLink>
 
       <!-- Dropdown item -->
-      <div class="nav-item-link relative cursor-pointer">
+      <div class="cursor-pointer nav-item-link relative">
         <!-- Nav Item to trigger Dropdown Menu -->
         <div class="flex" @click="showDDM()">
           <span>Informations</span>
@@ -35,7 +35,7 @@ onClickOutside(target, (e) => (isDDMDown.value = false))
 
         <!-- Dropdown menu -->
         <div
-          class="transition lg:( origin-top-right absolute right-0 left--1 mt-3 w-40 rounded-md shadow-lg bg-base_light dark:bg-base ring-1 ring-base dark:ring-base_light )"
+          class="transition lg:( origin-top-right absolute right-0 left--1 mt-3 w-40 z-20 rounded-md shadow-lg bg-base_light dark:bg-base ring-1 ring-base dark:ring-base_light ) "
           :class="[isDDMDown ? 'block' : 'hidden']"
           @click="showDDM"
           ref="target"
@@ -54,7 +54,7 @@ onClickOutside(target, (e) => (isDDMDown.value = false))
     </nav>
 
     <!-- Mobile button -->
-    <div class="mobil-button block lg:hidden px-3 cursor-pointer" @click="showMenu()">
+    <div class="cursor-pointer px-3 mobil-button block lg:hidden" @click="showMenu()">
       <span class="bar" :class="[isActive ? 'translate-y-8px rotate-45' : '']"></span>
       <span class="bar" :class="[isActive ? 'opacity-0' : '']"></span>
       <span class="bar" :class="[isActive ? 'translate-y--8px rotate--45' : '']"></span>
@@ -64,7 +64,7 @@ onClickOutside(target, (e) => (isDDMDown.value = false))
 
 <style lang="scss" scoped>
 .dark .router-link-exact-active {
-  color: white;
+  color: rgb(var(--base_light));
 }
 
 .router-link-exact-active {

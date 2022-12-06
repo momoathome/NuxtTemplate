@@ -1,9 +1,9 @@
 <template>
   <!-- prettier-ignore -->
-  <header class="m-auto w-full flex py-2 lg:py-0 px-6 b-b-1px b-base/15 dark:b-base_light/10" >
-    <div class="flex justify-between items-center w-full">
+  <header class="flex m-auto w-full py-2 px-6 b-b-1px b-base/15 lg:py-0 dark:b-base_light/10" >
+    <div class="flex w-full justify-between items-center">
       <!-- Logo  -->
-      <div class="text-2xl font-semibold whitespace-nowrap no-underline dark:text-white">NovisV2</div>
+      <div class="font-semibold text-2xl whitespace-nowrap no-underline dark:text-base_light">Snow0wl</div>
 
       <Navbar />
       
@@ -11,7 +11,7 @@
 
     <div class="flex gap-3 items-center">
       <!-- Darkmode Component - Button -->
-      <DarkButton class="text-xl" />
+      <DarkButton class="text-xl leading-none" />
       <!-- Gihub Button -->
      <GithubButton to="https://github.com/momoathome" class="text-xl" />
     </div>

@@ -1,6 +1,6 @@
 <template>
   <!-- prettier-ignore -->
-  <div class="min-h-100vh  font-sans flex flex-col text-dark-800 bg-base_light dark:( text-light-700 bg-base )">
+  <div class="bg-base_light flex flex-col font-sans min-h-100vh text-dark-800 dark:( text-light-700 bg-base ) ">
     
     <TheHeader />
 
