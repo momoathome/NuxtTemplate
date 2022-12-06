@@ -1,6 +1,6 @@
 {
   "name": "nuxt3-snowowl-starter-template",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "my Nuxt 3 starter template with Nuxt3 + unocss",
   "private": true,
   "author": "Snowowl",
@@ -14,18 +14,17 @@
     "start": "nuxt start",
     "build": "nuxt build",
     "generate": "nuxt generate",
-    "preview": "nuxt preview",
-    "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"
+    "preview": "nuxt preview"
   },
   "devDependencies": {
-    "@iconify/json": "^2.1.93",
-    "@pinia/nuxt": "^0.4.0",
-    "@unocss/nuxt": "^0.45.7",
-    "@vueuse/core": "^9.1.0",
-    "@vueuse/nuxt": "^9.1.0",
-    "nuxt": "3.0.0-rc.8",
+    "@iconify/json": "^2.1.148",
+    "@pinia/nuxt": "^0.4.6",
+    "@unocss/nuxt": "^0.47.5",
+    "@vueuse/core": "^9.6.0",
+    "@vueuse/nuxt": "^9.6.0",
+    "nuxt": "3.0.0",
     "push-dir": "^0.4.1",
-    "sass": "^1.54.4",
-    "sass-loader": "13.0.2"
+    "sass": "^1.56.1",
+    "sass-loader": "13.2.0"
   }
 }

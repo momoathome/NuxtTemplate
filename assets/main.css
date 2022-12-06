@@ -1,3 +1,12 @@
+:root {
+  font-size: 16px;
+
+  --base: 12, 15, 24;
+  --base-light: 244, 244, 245; 
+
+}
+
+
 .page-enter-from,
 .page-leave-to {
   opacity: 0;
