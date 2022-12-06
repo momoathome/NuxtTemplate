@@ -14,7 +14,7 @@ export default defineConfig({
   shortcuts: [
     [
       'nav-item-link',
-      'no-underline transition py-2 px-4 text-lg font-bold text-dark-800 hover:text-teal-600 dark:text-gray-400 dark:hover:text-white lg:( text-1rem py-2.5 )',
+      'no-underline transition py-2 px-4 text-lg font-bold text-dark-800 hover:text-teal-600 dark:text-gray-400 dark:hover:text-base_light lg:( text-1rem py-2.5 )',
     ],
     [
       'dropDown-item',
@@ -58,11 +58,11 @@ export default defineConfig({
   rules: [
     [
       /^text-(.*)$/,
-      ([, c], {theme}) => {
+      ([, c], { theme }) => {
         // @ts-ignore
         if (theme.colors[c]) {
           // @ts-ignore prettier-ignore
-          return {color: theme.colors[c]}
+          return { color: theme.colors[c] }
         }
       },
     ],

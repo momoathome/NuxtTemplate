@@ -2,49 +2,57 @@
 /* Mobile Menu */
 const isActive = ref(false)
 const showMenu = () => {
-  isActive.value = !isActive.value
+  if (isActive.value) {
+    isActive.value = false
+  } else isActive.value = !isActive.value
 }
 
 /* Dropdown Menu */
 const isDDMDown = ref(false)
 const target = ref()
 const showDDM = () => {
-  isDDMDown.value = !isDDMDown.value
+  if (isDDMDown.value) {
+    isDDMDown.value = false
+  } else isDDMDown.value = !isDDMDown.value
 }
-onClickOutside(target, (e) => (isDDMDown.value = false))
+onClickOutside(target, (e) => {
+  if (isDDMDown.value) {
+    isDDMDown.value = false
+  }
+})
 </script>
 
 <template>
   <div>
     <nav
-      class="bg-base_light flex-col flex h-screen w-full py-2 px-6 transition-left top-12 left--100% z-10 fixed md:( border-r-1 border-t-1 border-base dark:border-base_light w-30% h-full ) lg:( border-none static flex-row w-auto h-auto py-0 m-0 ) dark:bg-base "
-      :class="[isActive ? 'left-0' : '']"
-    >
+      class="bg-base_light flex-col flex h-screen w-full py-2 px-6 transition-left top-12 left--100% z-10 fixed md:( border-r-1 border-t-1 border-base dark:border-base_light w-30% h-full ) lg:( border-none static flex-row w-full h-auto py-0 m-0 ) dark:bg-base "
+      :class="[isActive ? 'left-0' : '']">
       <!-- Navigation Links -->
-      <NuxtLink to="/" class="nav-item-link"> Home </NuxtLink>
-      <NuxtLink to="/about" class="nav-item-link"> About </NuxtLink>
-      <NuxtLink to="" class="nav-item-link"> Link </NuxtLink>
+      <NuxtLink to="/" @click="showMenu" class="nav-item-link"> Home </NuxtLink>
+      <NuxtLink to="/about" @click="showMenu" class="nav-item-link"> About </NuxtLink>
+      <NuxtLink to="" @click="showMenu" class="nav-item-link"> Link </NuxtLink>
 
       <!-- Dropdown item -->
-      <div class="cursor-pointer nav-item-link relative">
+      <div class="cursor-pointer nav-item-link relative" @click="showDDM()" ref="target">
         <!-- Nav Item to trigger Dropdown Menu -->
-        <div class="flex" @click="showDDM()">
+        <div class="flex">
           <span>Informations</span>
-          <div i-fa6-solid-sort-down class="ms-1 lg:mt-0.5" />
+          <div
+            i-ph-caret-down-fill
+            class="h-inherit transition-transform transition-duration-300 align-middle ms-1"
+            :class="[isDDMDown ? 'rotate-180' : '']" />
         </div>
 
         <!-- Dropdown menu -->
         <div
-          class="transition lg:( origin-top-right absolute right-0 left--1 mt-3 w-40 z-20 rounded-md shadow-lg bg-base_light dark:bg-base ring-1 ring-base dark:ring-base_light ) "
-          :class="[isDDMDown ? 'block' : 'hidden']"
-          @click="showDDM"
-          ref="target"
-        >
-          <div class="py-1">
-            <NuxtLink to="" class="dropDown-item"> Link </NuxtLink>
-            <NuxtLink to="" class="dropDown-item"> Link </NuxtLink>
-            <NuxtLink to="" class="dropDown-item"> Link </NuxtLink>
-            <NuxtLink to="" class="dropDown-item"> Link </NuxtLink>
+          class="transition transition-duration-300 lg:( origin-top-right absolute right-0 left--1 mt-4 w-40 z-20 rounded-md shadow-lg bg-base_light dark:bg-base ring-1 ring-base dark:ring-base_light ) "
+          :class="[isDDMDown ? 'opacity-100 ' : 'opacity-0']"
+          @click="showDDM">
+          <div class="py-1" :class="[isDDMDown ? 'block' : 'hidden']">
+            <NuxtLink to="" @click="showMenu" class="dropDown-item"> Link </NuxtLink>
+            <NuxtLink to="" @click="showMenu" class="dropDown-item"> Link </NuxtLink>
+            <NuxtLink to="" @click="showMenu" class="dropDown-item"> Link </NuxtLink>
+            <NuxtLink to="" @click="showMenu" class="dropDown-item"> Link </NuxtLink>
           </div>
         </div>
       </div>

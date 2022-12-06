@@ -1,8 +1,4 @@
 # Nuxt 3 Snowowl Starter Template
-
-<a href="https://github.com/momoathome/NuxtTemplate"><img
-  src="public/owl-vector-light.svg" alt="Snowowl Logo"
-  width="80" align="right"></a>
   
 Look at the [nuxt 3 documentation](https://v3.nuxtjs.org) to learn more.
 
@@ -24,12 +20,13 @@ Look at the [nuxt 3 documentation](https://v3.nuxtjs.org) to learn more.
 ### Clone to local
 
 ```bash
-$> npx nuxi init -t momoathome/NuxtTemplate nuxt-app
-$> 🎉  Another snowy Nuxt project just made! Next steps:
+$>    npx nuxi init -t momoathome/NuxtTemplate nuxt-app
+$>
+$>    🎉  Another snowy Nuxt project just made! Next steps:
 $>
 $>    📁  `cd nuxt-app`
 $>
-$>    💿  Install dependencies with `npm install` or `yarn install` or `pnpm install --shamefully-hoist`
+$>    💿  Install dependencies with `npm install` or `yarn install` or `pnpm install`
 $>
 $>    🚀  Start development server with `npm run dev` or `yarn dev` or `pnpm run dev`
 ```
@@ -46,7 +43,7 @@ yarn install
 npm install
 
 # pnpm
-pnpm install --shamefully-hoist
+pnpm install
 ```
 
 ## Development Server
@@ -68,7 +65,7 @@ npm run build
 Locally preview production build:
 
 ```bash
-npm run preview
+npm run start
 ```
 
 Checkout the [deployment documentation](https://v3.nuxtjs.org/guide/deploy/presets) for more information.
